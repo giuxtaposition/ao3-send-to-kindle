@@ -10,3 +10,16 @@ export const testWorkHtml = `
 </ul>
 </li>
 `
+
+export const testWorkHtmlWithChapters = `
+<li class="download" aria-haspopup="true">
+<a href="#" class="collapsed">Download</a>
+<ul class="expandable secondary hidden">
+    <li><a href="/downloads/38458735/To%20Make%20a%20Ritual.azw3?updated_at=1652736824">AZW3</a></li>
+    <li><a href="/downloads/38458735/To%20Make%20a%20Ritual.epub?updated_at=1652736824">EPUB</a></li>
+    <li><a href="/downloads/38458735/To%20Make%20a%20Ritual.mobi?updated_at=1652736824">MOBI</a></li>
+    <li><a href="/downloads/38458735/To%20Make%20a%20Ritual.pdf?updated_at=1652736824">PDF</a></li>
+    <li><a href="/downloads/38458735/To%20Make%20a%20Ritual.html?updated_at=1652736824">HTML</a></li>
+</ul>
+</li>
+`

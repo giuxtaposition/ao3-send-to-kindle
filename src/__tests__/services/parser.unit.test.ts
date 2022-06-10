@@ -1,7 +1,7 @@
 import axios from "axios"
 import { InvalidUrlError } from "../../errors/InvalidUrlError"
 import { aParser } from "../../services/parser"
-import { testWorkHtml } from "../helpers/htmlHelpers"
+import { testWorkHtml, testWorkHtmlWithChapters } from "../helpers/htmlHelpers"
 
 describe("Parser", () => {
     afterAll(() => {
@@ -29,6 +29,22 @@ describe("Parser", () => {
 
         expect(url).toMatch(
             /https:\/\/archiveofourown\.org\/downloads\/123\/([\S]+)\.mobi/
+        )
+    })
+
+    test("given work url with chapters param, parse download url", async () => {
+        axios.get = vi.fn().mockReturnValue({
+            data: testWorkHtmlWithChapters,
+        })
+
+        const parser = aParser()
+
+        const url = await parser.fromWorkUrlToDownloadUrl(
+            "https://archiveofourown.org/works/38458735/chapters/96116941"
+        )
+
+        expect(url).toMatch(
+            /https:\/\/archiveofourown\.org\/downloads\/38458735\/([\S]+)\.mobi/
         )
     })
 
