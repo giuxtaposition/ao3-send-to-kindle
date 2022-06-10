@@ -1,5 +1,5 @@
 {
-    "name": "ao3-send-to-kindle-backend",
+    "name": "ao3-send-to-kindle",
     "version": "1.0.0",
     "description": "",
     "main": "dist/index.js",
