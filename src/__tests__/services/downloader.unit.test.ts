@@ -1,7 +1,6 @@
 import axios from "axios"
 import fs from "fs"
 import path from "path"
-import { afterAll, beforeEach, describe, expect, test, vi } from "vitest"
 import IParser from "../../interfaces/IParser"
 import { aDownloader } from "../../services/downloader"
 

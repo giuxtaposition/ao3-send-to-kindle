@@ -1,5 +1,4 @@
 import axios from "axios"
-import { afterAll, describe, expect, test, vi } from "vitest"
 import { InvalidUrlError } from "../../errors/InvalidUrlError"
 import { aParser } from "../../services/parser"
 import { testWorkHtml } from "../helpers/htmlHelpers"
